@@ -84,6 +84,8 @@ class About(Screen):
 			BoxName = "XCORE Spycat"
 		elif boxtype == 'quadbox2400':
 			BoxName = "AX Quadbox HD2400"
+		elif boxtype == 'vusolo2':
+			BoxName = "Vuplus Solo2"
 		else:
 			BoxName = about.getHardwareTypeString()
 
@@ -314,7 +316,7 @@ class TranslationInfo(Screen):
 		if infomap.get("Report-Msgid-Bugs-To", "") != "":
 			linfo += _("Report Msgid Bugs To")	+ ":" + infomap.get("Report-Msgid-Bugs-To", "") + "\n"
 		else:
-			linfo += _("Report Msgid Bugs To")	+ ":" + "teamblue@online.de" + "\n"
+			linfo += _("Report Msgid Bugs To")	+ ":" + "redouaneelrhachi@hotmail.com" + "\n"
 		self["AboutScrollLabel"] = ScrollLabel(linfo)
 
 
@@ -341,8 +343,8 @@ class CommitInfo(Screen):
 		self.project = 0
 		self.projects = [
 			#("organisation",  "repository",           "readable name",                "branch", "github/gitlab"),
-			("teamblue-e2",      "enigma2",               "teamBlue Enigma2",             "6.4", "github"),
-			("teamblue-e2",      "skin",             "teamBlue Skin GigaBlue Pax",   "master", "github"),
+			("oostende",      "dvbapp-egami",         "ostende Enigma2",             "master", "github"),
+			("a4tech",           "skin",                "egami skins",               "master", "github"),
 			("oe-alliance",   "oe-alliance-core",     "OE Alliance Core",             "4.4", "github"),
 			("oe-alliance",   "oe-alliance-plugins",  "OE Alliance Plugins",          "master", "github"),
 			("oe-alliance",   "enigma2-plugins",      "OE Alliance Enigma2 Plugins",  "master", "github")
@@ -426,8 +428,8 @@ class ContactInfo(Screen):
 		self["manufacturerinfo"] = StaticText(self.getManufacturerinfo())
 
 	def getManufacturerinfo(self):
-		minfo = "teamBlue\n"
-		minfo += "http://teamblue.tech\n"
+		minfo = "Redouane Ostende\n"
+		minfo += "http://startimes.com\n"
 		return minfo
 
 class MemoryInfo(Screen):
